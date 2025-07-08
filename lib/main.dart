@@ -1,7 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_self_demo/module/test_ani_one.dart';
+import 'package:flutter_self_demo/module/test_ani_one/test_ani_one.dart';
+import 'package:flutter_self_demo/module/test_ani_one2/test_ani_one2.dart';
+import 'package:flutter_self_demo/module/test_drag_two/test_drag_one.dart';
+import 'package:flutter_self_demo/module/test_drag_two/test_drag_one2.dart';
+import 'package:flutter_self_demo/module/test_drag_two/test_drag_one3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,17 +69,57 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(builder: (_) => TestAniOne()),
               );
             },
-            child: Container(
-              height: 80,
-              color: getRandomColor(),
-              alignment: Alignment.center,
-              child: Text(
-                'TestAniOne',
-                style: const TextStyle(color: Colors.white, fontSize: 18),
-              ),
-            ),
+            child: mainContanier("TestAniOne"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestAniOne2()),
+              );
+            },
+            child: mainContanier("TestAniOne2"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestDragOne()),
+              );
+            },
+            child: mainContanier("TestDragOne"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestDragOne2()),
+              );
+            },
+            child: mainContanier("TestDragOne2"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestDragOne3()),
+              );
+            },
+            child: mainContanier("TestDragOne3"),
           )
         ],
+      ),
+    );
+  }
+
+  Widget mainContanier(String name) {
+    return Container(
+      height: 80,
+      color: getRandomColor(),
+      alignment: Alignment.center,
+      child: Text(
+        name,
+        style: const TextStyle(color: Colors.white, fontSize: 18),
       ),
     );
   }

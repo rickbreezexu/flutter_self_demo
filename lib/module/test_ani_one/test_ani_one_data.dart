@@ -1,5 +1,5 @@
 class TestAniOneData {
-    final List<Map<String, dynamic>> dataList = const [
+    static const List<Map<String, dynamic>> dataList = const [
     {
       'symbol': '200AUD',
       'time': '11:19:25',
