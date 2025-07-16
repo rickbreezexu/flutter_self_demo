@@ -6,6 +6,9 @@ import 'package:flutter_self_demo/module/test_ani_one2/test_ani_one2.dart';
 import 'package:flutter_self_demo/module/test_drag_two/test_drag_one.dart';
 import 'package:flutter_self_demo/module/test_drag_two/test_drag_one2.dart';
 import 'package:flutter_self_demo/module/test_drag_two/test_drag_one3.dart';
+import 'package:flutter_self_demo/module/test_kchart_header_demo/test_kchart_header_demo.dart';
+import 'package:flutter_self_demo/module/test_kchart_header_demo/test_kchart_header_demo2.dart';
+import 'package:flutter_self_demo/module/test_kchart_header_demo/test_kchart_header_demo3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,6 +109,33 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             },
             child: mainContanier("TestDragOne3"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestKchartHeaderDemo()),
+              );
+            },
+            child: mainContanier("TestKchartHeaderDemo"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestKchartHeaderDemo2()),
+              );
+            },
+            child: mainContanier("TestKchartHeaderDemo2"),
+          ),
+                   GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TestKchartHeaderDemo3()),
+              );
+            },
+            child: mainContanier("TestKchartHeaderDemo3"),
           )
         ],
       ),
